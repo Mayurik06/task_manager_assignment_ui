@@ -16,7 +16,7 @@ const adminAppService=Axios.create({
 adminAppService.interceptors.request.use((config) => {
     const token = login_response.token;
     if (token) {
-        config.headers.Authorization = `Bearer hbdjddskxnmsxnsndendejdejdj`;
+        config.headers.Authorization = `Bearer ${token}`;
     }
     return config;
 });
